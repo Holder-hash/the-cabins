@@ -483,3 +483,19 @@ footer {
         }
     }
 }
+
+@media screen and (max-width: 1000px) {
+    #cabins,
+    #cards {
+        opacity: 1;
+    }
+    #map,
+    #forest,
+    #moreLeft,
+    #moreRight {
+        transform: translateX(0);
+    }
+    #upBtn {
+        display: none;
+    }
+}

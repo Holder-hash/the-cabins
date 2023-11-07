@@ -486,4 +486,20 @@ footer .footer__wrapper .footer__right .footer__partner-list {
   margin-top: 50px;
   gap: 40px;
   list-style: none;
+}
+
+@media screen and (max-width: 1000px) {
+  #cabins,
+  #cards {
+    opacity: 1;
+  }
+  #map,
+  #forest,
+  #moreLeft,
+  #moreRight {
+    transform: translateX(0);
+  }
+  #upBtn {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
