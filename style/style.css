@@ -497,7 +497,7 @@ footer .footer__wrapper .footer__right .footer__partner-list {
   #forest,
   #moreLeft,
   #moreRight {
-    transform: translateX(0);
+    transform: translateX(0) !important;
   }
   #upBtn {
     display: none;

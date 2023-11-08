@@ -493,7 +493,7 @@ footer {
     #forest,
     #moreLeft,
     #moreRight {
-        transform: translateX(0);
+        transform: translateX(0) !important;
     }
     #upBtn {
         display: none;
