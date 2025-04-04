@@ -1,0 +1,46 @@
+header {
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 55px;
+}
+
+nav {
+    position: absolute;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    height: inherit;
+    margin: 0 auto;
+    display: flex;
+
+    background: rgba(54, 54, 54, 0.63);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+
+
+}
+
+li, a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.login {
+    margin-left: 30px;
+}
+.login>svg {
+    width: 28px;
+}

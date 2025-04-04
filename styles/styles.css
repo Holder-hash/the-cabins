@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-VariableFont_wdth,wght.ttf');
+}

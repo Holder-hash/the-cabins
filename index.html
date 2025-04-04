@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="pages/main/main-page.css" />
+
+    <link rel="stylesheet" href="components/modal/modal.css" />
+    <title>Спортивный лагерь имени Олега Ефанова</title>
+  </head>
+  <body>
+    <div id="modalOverlay" class="modal-overlay">
+      <div class="modal">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Закажите звонок!</h2>
+        <p>Наш оператор свяжется с Вами и проконсультирует Вас!</p>
+        <input
+          type="tel"
+          id="phoneInput"
+          placeholder="+7 (___) ___-__-__"
+          pattern="^(\\+7|8)[-\\s]?\\(?\\d{3}\\)?[-\\s]?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"
+          required
+        />
+        <button id="submitBtn">Отправить</button>
+      </div>
+    </div>
+
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <a href="">
+              <img src="media/logo-transparent.png" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="">Запись</a>
+          </li>
+          <li>
+            <a href="">Контакты</a>
+          </li>
+          <li>
+            <a href="">О нас</a>
+          </li>
+          <li class="login">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 -960 960 960"
+              fill="#e3e3e3"
+            >
+              <path
+                d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"
+              />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="overview">
+        <div class="overview-inner">
+          <h1>Спортивный лагерь имени Олега Ефанова</h1>
+
+          <button>Посмотреть</button>
+        </div>
+      </section>
+
+      <section class="advantages">
+        <div class="advantages__item">
+          <img src="pages/main/media/advantage-1.webp" alt="" />
+          <p>
+            Лагерь на берегу <br />
+            Коспийского моря
+          </p>
+        </div>
+        <div class="advantages__item">
+          <p>Большой, современный зал</p>
+          <img src="pages/main/media/advantage-2.webp" alt="" />
+        </div>
+        <div class="advantages__item">
+          <img src="pages/main/media/advantage-3.webp" alt="" />
+          <p>
+            Просторная столовая <br />
+            со вкусной едой
+          </p>
+        </div>
+      </section>
+
+      <section class="price">
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Вид спорта</th>
+                <th>Стоимость</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Плавание</td>
+                <td>120000р/год</td>
+              </tr>
+              <tr>
+                <td>Футбол</td>
+                <td>135000р/год</td>
+              </tr>
+              <tr>
+                <td>Волейбол</td>
+                <td>150000р/год</td>
+              </tr>
+              <tr>
+                <td>Баскетбол</td>
+                <td>165000р/год</td>
+              </tr>
+              <tr>
+                <td>Легкая атлетика</td>
+                <td>200000р/год</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="request">
+        <div class="request__inner">
+          <p>Скорее записывайся!</p>
+          <button class="signup-button" id="openModalBtn">Записаться</button>
+          <div class="request__blur"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Спортивный лагерь имени Олега Ефанова©</p>
+    </footer>
+
+    <script src="components/modal/modal.js"></script>
+  </body>
+</html>
