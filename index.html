@@ -24,11 +24,16 @@
           pattern="^(\+7|8)[-\s]?\(?\d{3}\)?[-\s]?\d{3}[-\s]?\d{2}[-\s]?\d{2}$"
           required
         />
-        <button id="submitBtn">Отправить</button>
+
+        <button
+          onclick="document.getElementById('priceSection').scrollIntoView({ behavior: 'smooth' })"
+        >
+          Отправить
+        </button>
       </div>
     </div>
 
-    <header>
+    <header id="header">
       <nav>
         <ul>
           <li class="logo">
@@ -65,7 +70,9 @@
         <div class="overview-inner">
           <h1>Спортивный лагерь имени Олега Ефанова</h1>
 
-          <button>Посмотреть</button>
+          <a href="#priceSection">
+            <button>Посмотреть</button>
+          </a>
         </div>
       </section>
 
@@ -90,7 +97,7 @@
         </div>
       </section>
 
-      <section class="price">
+      <section class="price" id="priceSection">
         <div class="table-container">
           <table>
             <thead>
@@ -139,5 +146,18 @@
     </footer>
 
     <script src="components/modal/modal.js"></script>
+    <script>
+      let lastScrollY = window.scrollY;
+      const header = document.getElementById("header");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY) {
+          header.classList.add("header--hidden");
+        } else {
+          header.classList.remove("header--hidden");
+        }
+        lastScrollY = window.scrollY;
+      });
+    </script>
   </body>
 </html>
