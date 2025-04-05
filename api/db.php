@@ -1,6 +1,6 @@
 <?php
 
-$servername = "localhost";
+$servername = "MySQL-8.0";
 $username   = "root";
 $password   = "";
 $dbname     = "oleg-efanov";

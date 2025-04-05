@@ -46,7 +46,6 @@ phoneInput.addEventListener('input', function() {
 });
 
 submitBtn.addEventListener('click', () => {
-
   const digits = phoneInput.value.replace(/[^\d]/g, '');
   if (!/^7\d{10}$/.test(digits)) {
     phoneInput.classList.add('invalid');
@@ -54,6 +53,20 @@ submitBtn.addEventListener('click', () => {
     return;
   }
 
-  console.log('Отправка запроса на сервер с номером: ' + digits);
-  closeModal();
+  fetch('https://oleg-diplom.local/api/requests/submit_request.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: 'phone=' + encodeURIComponent(phoneInput.value)
+  })
+  .then(response => response.text())
+  .then(result => {
+    console.log('Ответ сервера:', result);
+    closeModal();
+  })
+  .catch(error => {
+    console.error('Ошибка:', error);
+    alert('Ошибка отправки запроса на сервер.');
+  });
 });
